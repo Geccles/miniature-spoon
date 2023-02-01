@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            gap: 10px;
+            gap: 10px 20px; /* row-gap column gap */
+            row-gap: 10px;
+            column-gap: 20px;
+            justify-content: center;
+        }
+        .item {
+            display: flex;
+            border: 1px solid black;
+            padding: 24px;
+            margin: 24px;
+            display: inline;
+            max-width: 400px;
+            flex-wrap: wrap;
+            box-sizing: 48px;
+        }
+        .button {
+            width: 100%;
+            padding: 10px 24px;
+            flex-grow: 0;
+            align-self: center;
+            flex-shrink: 0;
+            flex-basis: 20%;
+            align-items: center;
+            border-radius: 18px;
+            background-color: aliceblue;
+            border: 1px solid cornflowerblue;
+            cursor: pointer;
+        }
+        .button:hover {
+            box-shadow: 2px 4px 10px cornflowerblue;
+
+        }
+        .button_text {
+            font-size: 16px;
+            color: cornflowerblue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: normal;
+            font-weight: 500;
+        }
+        .label {
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="item">
+           <div class="label">Name: </div> <div id="name">...</div>
+        </div>
+        <div class="item">
+            <div class="label">Gender: </div><div id="gender">...</div>
+        </div>
+        <div class="item">
+            <div class="label">Birth year: </div><div id="birth_year">...</div>
+        </div>
+
+        <button class="button getRandomCharacter">
+            <p class="button_text">Get New Character</p>
+        </button>
+    </div>
+    
+    <script src="requestStarwars.js"></script>
+</body>
+</html>
